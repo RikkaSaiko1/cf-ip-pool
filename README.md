@@ -2,6 +2,13 @@
 
 自动生成 Cloudflare 可用 IPv4 池，每 6 小时刷新。**纯 `IP:端口`，无国家/机房标注。**
 
+GitHub 构建--[ipv4.txt](https://raw.githubusercontent.com/RIKKASAIKOq/cf-ip-pool/refs/heads/main/output/ipv4.txt)
+```
+https://raw.githubusercontent.com/RIKKASAIKOq/cf-ip-pool/refs/heads/main/output/ipv4.txt
+```
+
+
+
 ## 产出
 
 | 文件 | 说明 |
