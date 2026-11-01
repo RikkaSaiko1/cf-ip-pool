@@ -72,6 +72,9 @@ jobs:
           if [ -n "${{ github.event.inputs.timeout }}" ]; then EXTRA="$EXTRA --timeout ${{ github.event.inputs.timeout }}"; fi
           if [ "${{ github.event.inputs.no_header }}" = "true" ]; then EXTRA="$EXTRA --no-header"; fi
 
+          # 清掉历史遗留的断点状态文件：它会让每次运行跳过所有已探 IP，最终产出 0 条
+          rm -f output/pool_state.json
+
           python scripts/build_pool.py --config config.json $EXTRA
 
       # ── 5. 打印摘要，方便在 Actions 日志里直接看结果 ──────────
